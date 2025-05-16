@@ -1,0 +1,5 @@
+disnake
+asyncio
+asyncpraw
+os
+json
