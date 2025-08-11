@@ -58,7 +58,7 @@ async def on_member_join(member):
     
     content=member.mention
     embed=disnake.Embed(
-        title='Добро пожаловать на дискорд сервер Tutorial Server',
+        title='Добро пожаловать на дискорд сервер {member.guild}',
         description='Друг, приветствуем тебя на дискорд сервере по обучению работы с Discord Api\n',
         color=disnake.Color(0xFFFFFF) # 
     )
@@ -68,7 +68,7 @@ async def on_member_join(member):
         inline=False
     )
     embed.add_field(
-        name="Приятного времяпровождения на Discord сервере Tutorial Server",
+        name="Приятного времяпровождения на Discord сервере {member.guild}",
         value="",
         inline=False
     )
@@ -77,4 +77,5 @@ async def on_member_join(member):
     await channel.send(components=components, embed=embed, content=content)
 
 # Bot run
+
 client.run(api.token['DISCORD_API'])
